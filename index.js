@@ -1,15 +1,17 @@
 function calculateDecimal(event) {
-    const binarySwitches = document.querySelectorAll('#simpleList');
+    if (!otherCheckbox.checked) {
+        const binarySwitches = document.querySelectorAll('#simpleList');
 
-    let decimalValue = 0;
+        let decimalValue = 0;
 
-    binarySwitches.forEach((switchInput, index) => {
-        if (switchInput.children[0].classList.contains("one-card")) {
-            decimalValue += Math.pow(2, index);
-        }
-    });
+        binarySwitches.forEach((switchInput, index) => {
+            if (switchInput.children[0].classList.contains("one-card")) {
+                decimalValue += Math.pow(2, index);
+            }
+        });
 
-    document.getElementById('decimal-value').textContent = decimalValue;
+        document.getElementById('decimal-value').textContent = decimalValue;
+    }
 }
 
 // Create binary switches for decimal numbers 1, 2, 4, 8, 16, 32, 64, etc.
@@ -50,3 +52,15 @@ for (let decimal = 1; decimal <= maxDecimalValue; decimal *= 2) {
 `;
     binaryBody.appendChild(newBodyItem)
 }
+
+
+
+
+const otherCheckbox = document.querySelector("#scales");
+otherCheckbox.addEventListener("change", () => {
+    if (otherCheckbox.checked) {
+        document.getElementById('decimal-value').textContent = "???";
+    } else {
+        calculateDecimal()
+    }
+});
