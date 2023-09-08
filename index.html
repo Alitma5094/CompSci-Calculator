@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompSci Calculator</title>
     <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 </head>
-
 <body>
     <h1>Binary Calculator</h1>
-    <!-- <div id="binary-container"> -->
-    <!-- JavaScript will populate this section -->
-    <!-- </div> -->
-    <table class="table table-bordered" id="binary-container">
+    <table class="table table-bordered">
         <thead>
-            <tr id="binary-header"></tr>
+            <tr id="binaryHeader"></tr>
         </thead>
         <tbody>
-            <tr id="binary-body"></tr>
+            <tr id="binaryPower"></tr>
+            <tr id="binaryBody"></tr>
         </tbody>
     </table>
     <p>Decimal Value: <span id="decimal-value">0</span></p>
-    <input type="checkbox" id="scales" name="scales" />
+    <input type="checkbox" id="decimalCheckbox"/>
     <label for="scales">Hide decimal value</label>
     </div>
     <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="lib/sortablejs/sortable.js"></script>
     <script src="index.js"></script>
 </body>
-
 </html>
